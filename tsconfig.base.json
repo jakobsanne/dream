@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@dream/checkbox": ["packages/ui/checkbox/src/index.ts"],
       "@dream/ui": ["packages/ui/src/index.ts"]
     }
   },

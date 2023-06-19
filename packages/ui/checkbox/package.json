@@ -1,0 +1,15 @@
+{
+  "name": "@schwiftyconsulting/checkbox",
+  "version": "0.1.0",
+  "main": "./index.js",
+  "types": "./index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./index.mjs",
+      "require": "./index.js"
+    }
+  },
+  "dependencies": {
+    "@radix-ui/react-checkbox": "^1.0.4"
+  }
+}

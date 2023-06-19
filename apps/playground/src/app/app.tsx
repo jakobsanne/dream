@@ -1,5 +1,6 @@
 import styles from './app.module.scss';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@dream/ui';
+import { UiCheckbox } from '@dream/checkbox';
 
 export function App() {
   return (
@@ -19,7 +20,9 @@ export function App() {
         </Select>
         ⬅ This is a Select component
       </div>
-
+      <div>
+        <UiCheckbox label={'CHECK THIS OUT'}></UiCheckbox>
+      </div>
     </div>
   );
 }
