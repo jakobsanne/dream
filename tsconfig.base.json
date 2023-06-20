@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@dream/ui": ["packages/ui/src/index.ts"]
+      "@dream/checkbox": ["packages/ui/checkbox/src/index.ts"],
+      "@schwiftyconsulting/checkbox": ["packages/ui/checkbox/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

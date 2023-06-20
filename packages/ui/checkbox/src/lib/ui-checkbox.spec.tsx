@@ -1,10 +1,10 @@
 import { render } from '@testing-library/react';
 
-import Select from './select';
+import UiCheckbox from './ui-checkbox';
 
-describe('Select', () => {
+describe('UiCheckbox', () => {
   it('should render successfully', () => {
-    const { baseElement } = render(<Select />);
+    const { baseElement } = render(<UiCheckbox />);
     expect(baseElement).toBeTruthy();
   });
 });
