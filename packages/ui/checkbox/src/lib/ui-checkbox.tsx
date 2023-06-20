@@ -1,26 +1,24 @@
 import styles from './ui-checkbox.module.scss';
-import * as Checkbox from '@radix-ui/react-checkbox';
+import * as React from 'react';
 import { CheckIcon } from '@radix-ui/react-icons';
-import { CheckboxProps } from '@radix-ui/react-checkbox';
+import * as Checkbox from '@radix-ui/react-checkbox';
 
-/* eslint-disable-next-line */
-export interface UiCheckboxProps extends CheckboxProps{
-  label: string
-}
+const UiCheckbox = React.forwardRef<
+  React.ElementRef<typeof Checkbox.Root>,
+  React.ComponentPropsWithoutRef<typeof Checkbox.Root>
+>(({ className,...props }, ref) => (
+  <Checkbox.Root
+    ref={ref}
+    className={className}
+    {...props}
+  >
+    <Checkbox.Indicator
+      className={''}
+    >
+      <CheckIcon />
+    </Checkbox.Indicator>
+  </Checkbox.Root>
+))
+UiCheckbox.displayName = Checkbox.Root.displayName
 
-export function UiCheckbox(props: UiCheckboxProps) {
-  return (
-    <div style={{ display: 'flex', alignItems: 'center' }}>
-      <Checkbox.Root className="CheckboxRoot" defaultChecked id="c1">
-        <Checkbox.Indicator className="CheckboxIndicator">
-          <CheckIcon />
-        </Checkbox.Indicator>
-      </Checkbox.Root>
-      <label className="Label" htmlFor="c1">
-        {props.label}
-      </label>
-    </div>
-  );
-}
-
-export default UiCheckbox;
+export { UiCheckbox }
